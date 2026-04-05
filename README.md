@@ -15,13 +15,13 @@ Traditional geopolitical alignment measures — such as Bailey et al. (2017), wh
 .
 ├── README.md
 ├── data/
-│   └── sample_canada_alignment.csv   # Sample usage-weighted results for Canada
+│   ├── alignment_usage_weighted_scores_can_new_methodolgy.csv
+|   └── china_scored_new.csv
 ├── scripts/
-│   ├── llm_alignment_score.py        # LLM-based alignment scoring via OpenAI API
-│   └── usage_weighted_alignment.py   # Rule-based usage-weighted alignment scoring
+│   ├── sample script-China.py 
 └── docs/
-    ├── project_proposal.md           # Full project proposal
-    └── presentation.md               # Short slide-deck outline
+    ├── ChatGPT 26.pdf           
+    └── Proposal.pdf               
 ```
 
 ## Sample Results
@@ -58,6 +58,15 @@ A positive net score indicates net positive diplomatic sentiment; a negative sco
 3. Aggregate scores per origin–target pair across all documents and time periods.
 
 See `scripts/llm_alignment_score.py` for the full prompt and API integration.
+
+## The Importance of Effective Prompt Writing 
+
+Throughout this project, we aim to address a major gap in existing approaches to measuring countries’ geopolitical alignment. At present, there is no widely accepted or sufficiently accurate methodology for constructing a global geopolitical alignment index. To address this, we developed two models: a usage-weighted geopolitical alignment score and an LLM-based geopolitical alignment index.
+
+While developing the LLM-based model, we observed that effective prompt writing is critical to achieving reliable and meaningful results. Early iterations suffered from ambiguity and inconsistent outputs, as our initial prompts were too vague to guide the model in identifying context-sensitive language and tone with sufficient precision. After iteratively refining our prompt, we achieved results that more clearly differentiate our model from—and potentially improve upon—existing UN data–based methodologies.
+
+With additional funding and API access, future work could systematically analyze how variations in prompt wording influence model outputs, further improving accuracy and robustness. We include both our initial and final prompts here; the dramatic improvement in results highlights the value of iterative prompt design and underscores its importance to the success of our final model.
+
 
 ## Why LLMs Beat Simple Keyword Counting
 
