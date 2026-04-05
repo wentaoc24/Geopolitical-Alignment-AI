@@ -67,6 +67,63 @@ While developing the LLM-based model, we observed that effective prompt writing 
 
 With additional funding and API access, future work could systematically analyze how variations in prompt wording influence model outputs, further improving accuracy and robustness. We include both our initial and final prompts here; the dramatic improvement in results highlights the value of iterative prompt design and underscores its importance to the success of our final model.
 
+```
+Old: "You are evaluating diplomatic language.
+Does this text indicate cooperative alignment, neutral positioning, or adversarial positioning between {origin} and {target}?
+Assign a score from:
+-1.0 = strongly adversarial
+0 = neutral
++1.0 = strongly cooperative
+Consider tone, commitments, agreements, military tensions, sanctions, etc.
+Output only a numeric score.
+Temperature = 0.
+
+TEXT:
+{chunk}"
+
+New: "You are evaluating diplomatic language in an official Chinese foreign ministry document.
+
+Does this text indicate cooperative alignment, neutral positioning, or adversarial positioning between {origin} and {target}?
+
+IMPORTANT:
+- Focus only on language relevant to the relationship between {origin} and {target}.
+- This language is often found in meeting summaries, joint statements, press conferences, spokesperson remarks, or bilateral cooperation sections.
+- If the document discusses {target} separately from other countries, evaluate ONLY the language about {target}.
+- If {target} is grouped together with other countries or regions in a single statement and not separately identified, evaluate the grouped language.
+- If the text refers only to {target}, treat it as a bilateral statement.
+
+Assign a score from:
+-1.0 = strongly adversarial
+0 = neutral
++1.0 = strongly cooperative
+
+Consider:
+- tone
+- commitments
+- agreements
+- strategic partnerships
+- diplomatic support
+- disputes
+- military tensions
+- sanctions
+- accusations
+- condemnations
+- opposition to another state's actions
+- references to sovereignty, territorial issues, or interference
+
+Scoring guidance:
+- Use positive scores for clear cooperation, partnership, support, or deepening ties.
+- Use negative scores for condemnation, conflict, protest, or hostile positioning.
+- Use 0 for procedural, factual, or ambiguous language with no clear directional alignment.
+- If both positive and negative language appear, score the net diplomatic posture toward {target}.
+- Do not over-weight generic diplomatic courtesy unless it clearly signals substantive cooperation.
+
+Output only a numeric score.
+Temperature = 0.
+
+TEXT:
+{chunk}"              
+```
 
 ## Why LLMs Beat Simple Keyword Counting
 
