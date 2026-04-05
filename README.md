@@ -67,8 +67,9 @@ While developing the LLM-based model, we observed that effective prompt writing 
 
 With additional funding and API access, future work could systematically analyze how variations in prompt wording influence model outputs, further improving accuracy and robustness. We include both our initial and final prompts here; the dramatic improvement in results highlights the value of iterative prompt design and underscores its importance to the success of our final model.
 
+Old:
 ```
-Old: "You are evaluating diplomatic language.
+"You are evaluating diplomatic language.
 Does this text indicate cooperative alignment, neutral positioning, or adversarial positioning between {origin} and {target}?
 Assign a score from:
 -1.0 = strongly adversarial
@@ -80,8 +81,10 @@ Temperature = 0.
 
 TEXT:
 {chunk}"
-
-New: "You are evaluating diplomatic language in an official Chinese foreign ministry document.
+```
+New:
+```
+"You are evaluating diplomatic language in an official Chinese foreign ministry document.
 
 Does this text indicate cooperative alignment, neutral positioning, or adversarial positioning between {origin} and {target}?
 
