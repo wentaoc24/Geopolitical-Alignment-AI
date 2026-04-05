@@ -78,18 +78,6 @@ Foreign ministry texts rarely say "we are allies" or "we are hostile." Instead t
 - **Journalists & researchers** — Transparent, reproducible measure of diplomatic tone.
 - **Academics** — Alternative or complement to UNGA voting-based alignment indices.
 
-## Setup
-
-```bash
-pip install openai pandas
-```
-
-Set your OpenAI API key:
-
-```bash
-export OPENAI_API_KEY="your-key-here"
-```
-
 ## Usage
 
 ### LLM-Based Scoring
