@@ -78,26 +78,6 @@ Foreign ministry texts rarely say "we are allies" or "we are hostile." Instead t
 - **Journalists & researchers** — Transparent, reproducible measure of diplomatic tone.
 - **Academics** — Alternative or complement to UNGA voting-based alignment indices.
 
-## Usage
-
-### LLM-Based Scoring
-
-```bash
-python scripts/llm_alignment_score.py \
-  --input data/press_releases.csv \
-  --origin CAN \
-  --output data/llm_scores_canada.csv
-```
-
-### Usage-Weighted Scoring
-
-```bash
-python scripts/usage_weighted_alignment.py \
-  --input data/press_releases.csv \
-  --origin CAN \
-  --output data/weighted_scores_canada.csv
-```
-
 ## References
 
 - Bailey, M. A., Strezhnev, A., & Voeten, E. (2017). *Estimating Dynamic State Preferences from United Nations Voting Data.* Journal of Conflict Resolution, 61(2), 430–456.
