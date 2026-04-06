@@ -127,18 +127,15 @@ Temperature = 0.
 TEXT:
 {chunk}"              
 ```
+Result cComparison: 
 
-## Why LLMs Beat Simple Keyword Counting
-
-| Feature | Keyword Counting | LLM Approach |
-|---------|-----------------|--------------|
-| Context sensitivity | ✗ | ✓ |
-| Implicit tone detection | ✗ | ✓ |
-| Multi-country disambiguation | ✗ | ✓ |
-| Scalable across languages | Limited | ✓ |
-| Avoids rigid word lists | ✗ | ✓ |
-
-Foreign ministry texts rarely say "we are allies" or "we are hostile." Instead they use phrases like *"mutual trust," "constructive role," "grave concern,"* or *"interference in internal affairs."* An LLM interprets these phrases in context in a way that keyword counts cannot.
+| Origin | Destination | Title | Old Score | New Score |
+|--------|------------|-------|-----------|-----------|
+| China | United States | The Foreign Ministry Issues Statement on the US Claim of Downing a Chinese Unmanned Airship | -1 | -1 |
+| China | United States | Drug Abuse in the United States | 0.125 | -0.4625 |
+| China | United States | Relevant Consensus Reached by China and the US at the First Round of China-US Diplomatic and Security Dialogue | 1 | 1 |
+| China | United States | Rising Economic Polarization in the United States: Truth and Facts | 0 | -0.3125 |
+| China | United States | Vice Foreign Minister Ma Zhaoxu Meets with Newly-appointed Ambassador of the United States to China David Perdue | 1 | 0.7 |
 
 ## Applications
 
