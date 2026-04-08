@@ -127,7 +127,7 @@ Temperature = 0.
 TEXT:
 {chunk}"              
 ```
-Result cComparison: 
+Result Comparison: 
 
 | Origin | Destination | Title | Old Score | New Score |
 |--------|------------|-------|-----------|-----------|
